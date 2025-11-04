@@ -1,4 +1,9 @@
-h1 {
-    color: red;
-    
+.main-header__title {
+    text-align: center;
+}
+
+.section-title {
+    color: white;
+    background-color: black;
+    text-align: center;
 }
