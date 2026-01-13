@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru" class="show-event-popup">
+<!-- show-event-popup -->
+<html lang="ru" class="show-event-popups">
   @@include('blocks/head.html')
 
   <body class="body">
@@ -71,7 +72,15 @@
           </div>
         </section>
         <!-- Здесь будут дополнительные услуги -->
-        @@include('blocks/table.html')
+        <section class="service">
+          <h2 class="service__title section-title">Дополнительные услуги</h2>
+          <p class="service__description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. 
+            Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, 
+            но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.
+          </p>
+          @@include('blocks/table.html')
+        </section>
+        @@include('blocks/want.html')
       </div>
     </main>
     @@include('blocks/page-footer.html')

@@ -1188,6 +1188,58 @@ textarea:focus::placeholder {
 .content b {
   font-weight: 700;
 }
+.service {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 50px;
+}
+.service__title {
+  font-size: 22px;
+}
+.want {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.want__title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 50px;
+  font-family: "Lora", serif;
+  font-size: 22px;
+}
+.want__select {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 624px;
+  margin: 0 auto;
+}
 .events {
   padding: 140px 0 100px;
 }
@@ -1506,6 +1558,14 @@ textarea:focus::placeholder {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .service {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .want {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .page-header__container {
     padding-left: 30px;
     padding-right: 30px;
@@ -1645,6 +1705,14 @@ textarea:focus::placeholder {
     padding-right: 20px;
   }
   .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .service {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .want {
     padding-left: 20px;
     padding-right: 20px;
   }
