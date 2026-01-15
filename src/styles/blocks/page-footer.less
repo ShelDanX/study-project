@@ -1,3 +1,157 @@
 .page-footer {
   flex: 0 0 auto;
+  padding-top: 50px;
+  padding-bottom: 75px;
+  .container();
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__border {
+    box-sizing: border-box;
+    width: 46%;
+    height: 2px;
+
+    &--left {
+      background: linear-gradient(
+        270deg,
+        rgba(28, 27, 27, 1),
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &--right {
+      background: linear-gradient(
+        135deg,
+        rgba(28, 27, 27, 1),
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+
+  
+
+  &__select {
+    grid-area: select;
+    display: flex;
+  }
+
+  &__line {
+    width: 4px;
+    height: 198px;
+    background-color: @red;
+    margin-right: 22px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+
+  }
+
+  &__nav-link {
+    color: @black;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-right: 60px;
+    &:hover {
+      color: @red_dark;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 58px;
+  }
+
+  &__subscription {
+    max-width: 405px;
+    width: 30%;
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 14px;
+
+    &--c {
+      margin-bottom: 0;
+    }
+  }
+
+  &__send {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    border-radius: 0;
+    padding: 15px 28px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    height: 49px;
+    width: auto;
+    flex: 1 0 auto;
+  }
+
+  &__btn {
+    flex-basis: 134px;
+  }
+
+  &__agree-label {
+    margin: auto 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-areas: 
+    "millenials socials ."
+    "reference socials creators";
+    row-gap: 13px;
+  }
+
+  &__millenials {
+    grid-area: millenials;
+  }
+
+  &__reference {
+    grid-area: reference;
+    display: flex;
+    align-items: center;
+  }
+  
+  &__socials {
+    grid-area: socials;
+    display: flex;
+  }
+
+  &__x-btn {
+    width: 58px;
+    height: 58px;
+    margin: 0 22px;
+  }
+
+  &__creators {
+    grid-area: creators;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: 9px;
+  }
 }
