@@ -1,0 +1,77 @@
+.about {
+  .container();
+
+   &__intro,
+  &__gallery,
+  &__mission,
+  &__cta {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 40px;
+    align-items: start;
+  }
+
+  &__intro {
+    margin-bottom: 80px;
+  }
+
+  &__intro-title {
+    grid-column: 1 / 5;
+    margin: 0;
+  }
+
+  &__intro-text {
+    grid-column: 5 / 12;
+    margin: 0;
+  }
+
+  &__gallery {
+    margin-bottom: 80px;
+  }
+
+  &__photo--main {
+    grid-column: 1 / 9;
+    margin: 0;
+  }
+
+  &__photo--side {
+    grid-column: 9 / 13;
+    margin: 0;
+    align-self: end;
+  }
+
+  &__mission {
+    margin-bottom: 80px;
+  }
+
+  &__mission-title {
+    grid-column: 1 / 6;
+    margin: 0;
+  }
+
+  &__mission-text {
+    grid-column: 5 / 12;
+    margin: 0;
+  }
+
+  &__cta {
+    margin-bottom: 0;
+  }
+
+  &__photo--cta {
+    grid-column: 1 / 10;
+    margin: 0;
+  }
+
+  &__cta-content {
+    grid-column: 10 / 13;
+    align-self: end;
+  }
+
+  &__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+}

@@ -51,10 +51,12 @@
   <main class="main">
     <div class="home">
       <!-- прочая разметка -->
-      <div class="hero">
-        <p class="hero__subtitle">АРТ - ПРОСТРАНСТВО</p>
-        <div class="hero__title-wrap">
-          <span class="hero__title">LENNI</span>
+      <div class="hero home__hero">
+        <p class="hero__text">АРТ - ПРОСТРАНСТВО</p>
+        <div class="hero__wrapper">
+          <svg class="hero__lenni" width="1920">
+            <use xlink:href="assets/icons/symbols.svg#lenni"></use>
+          </svg>
         </div>
         <p class="hero__text">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ</p>
         <p class="hero__text">МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
@@ -66,6 +68,56 @@
           <button type="button" class="btn want__btn">Стать арендатором</button>
         </div>
       </div>
+      <section class="about home__about">
+        <div class="about__title section-title">О НАС</div>
+
+        <div class="about__intro">
+          <h2 class="about__intro-title">Проект «Millennials»</h2>
+          <p class="about__intro-text">
+            Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием
+            сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь
+            им воплотить их мечту в реальность.
+          </p>
+        </div>
+
+        <div class="about__gallery">
+          <figure class="about__photo about__photo--main">
+            <img src="assets/images/about/about-main.jpg" alt="Сцена и концерт" />
+          </figure>
+
+          <figure class="about__photo about__photo--side">
+            <img src="assets/images/about/about-side.jpg" alt="Выставка в галерее" />
+          </figure>
+        </div>
+
+        <div class="about__mission">
+          <h3 class="about__mission-title">Мы предоставляем площадки для вашего мероприятия</h3>
+          <p class="about__mission-text">
+            И оказываем помощь с организацией, если вам это нужно. Наша цель: вовлечь в культурную
+            жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей
+            мечте и рассказать всем о том, что их волнует.
+          </p>
+        </div>
+
+        <div class="about__cta">
+          <figure class="about__photo about__photo--cta">
+            <img src="assets/images/about/about-cta.jpg" alt="Городское пространство с людьми" />
+          </figure>
+
+          <div class="about__cta-content">
+            <p class="about__cta-text">
+              Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было
+              классно.
+            </p>
+
+            <a class="about__cta-link" href="#">
+              <span class="about__cta-link-text">Смотреть</span>
+              <span class="about__cta-link-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <!-- prettier-ignore -->
       <section class="listing home__listing">
         <h2 class="listing__title section-title">Блог</h2>

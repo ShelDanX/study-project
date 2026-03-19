@@ -1234,6 +1234,8 @@ textarea:focus::placeholder {
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
+  margin-top: 100px;
+  margin-bottom: 200px;
 }
 .want__title {
   -webkit-box-sizing: border-box;
@@ -1264,14 +1266,6 @@ textarea:focus::placeholder {
   margin: 0 auto;
 }
 .hero {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  max-width: 1414px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1283,45 +1277,97 @@ textarea:focus::placeholder {
       -ms-flex-align: center;
           align-items: center;
 }
-.hero__subtitle {
+.hero__text {
+  margin: 0;
   font-family: "Lora", serif;
   font-size: 45px;
   line-height: 58px;
-  margin-bottom: 70px;
 }
-.hero__title-wrap {
-  width: 100vw;
-  margin-bottom: 70px;
+.hero__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
 }
-.hero__title-wrap::before,
-.hero__title-wrap::after {
-  content: "";
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  background-color: #1f1e1e;
-  height: 17vw;
-  max-height: 325px;
+.hero__lenni {
+  margin: 70px 0;
+  width: 1920px;
+  aspect-ratio: 1920 / 325;
 }
-.hero__title {
-  margin: 0 -0.06em;
-  font-family: "mak", serif;
-  font-size: 325px;
-  font-weight: 400;
-  line-height: 1;
+.about {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
-.hero__text {
+.about__intro,
+.about__gallery,
+.about__mission,
+.about__cta {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.about__intro {
+  margin-bottom: 80px;
+}
+.about__intro-title {
+  grid-column: 1 / 5;
   margin: 0;
-  font-family: "Lora", serif;
-  font-size: 45px;
-  line-height: 58px;
+}
+.about__intro-text {
+  grid-column: 5 / 12;
+  margin: 0;
+}
+.about__gallery {
+  margin-bottom: 80px;
+}
+.about__photo--main {
+  grid-column: 1 / 9;
+  margin: 0;
+}
+.about__photo--side {
+  grid-column: 9 / 13;
+  margin: 0;
+  align-self: end;
+}
+.about__mission {
+  margin-bottom: 80px;
+}
+.about__mission-title {
+  grid-column: 1 / 6;
+  margin: 0;
+}
+.about__mission-text {
+  grid-column: 5 / 12;
+  margin: 0;
+}
+.about__cta {
+  margin-bottom: 0;
+}
+.about__photo--cta {
+  grid-column: 1 / 10;
+  margin: 0;
+}
+.about__cta-content {
+  grid-column: 10 / 13;
+  align-self: end;
+}
+.about__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .events {
   padding: 140px 0 100px;
@@ -1758,6 +1804,10 @@ textarea:focus::placeholder {
   .listing__events-list {
     margin: 0 -20px -100px;
   }
+  .hero__lenni {
+    width: 113%;
+    margin: 70px -6.5%;
+  }
   .page-header {
     height: 111px;
   }
@@ -1812,7 +1862,15 @@ textarea:focus::placeholder {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .hero {
+  .hero__text {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .hero__lenni {
+    width: 126%;
+    margin: 50px -13%;
+  }
+  .about {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1970,7 +2028,15 @@ textarea:focus::placeholder {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .hero {
+  .hero__text {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .hero__lenni {
+    width: 136%;
+    margin: 28px -18%;
+  }
+  .about {
     padding-left: 20px;
     padding-right: 20px;
   }
