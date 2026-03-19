@@ -123,7 +123,7 @@ textarea:focus::placeholder {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   text-align: center;
   text-decoration: none;
   -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
@@ -1249,9 +1249,10 @@ textarea:focus::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto 50px;
+  margin: 0 auto 46px;
   font-family: "Lora", serif;
   font-size: 22px;
+  line-height: 30px;
 }
 .want__select {
   -webkit-box-sizing: border-box;
@@ -1262,7 +1263,7 @@ textarea:focus::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 624px;
+  width: 624px;
   margin: 0 auto;
 }
 .hero {
@@ -1804,6 +1805,9 @@ textarea:focus::placeholder {
   .listing__events-list {
     margin: 0 -20px -100px;
   }
+  .want__select {
+    width: 604px;
+  }
   .hero__lenni {
     width: 113%;
     margin: 70px -6.5%;
@@ -1861,6 +1865,18 @@ textarea:focus::placeholder {
   .want {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .want {
+    margin-top: 73px;
+    margin-bottom: 130px;
+  }
+  .want__title {
+    margin-bottom: 43px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .want__select {
+    width: 566px;
   }
   .hero__text {
     font-size: 30px;
@@ -1987,6 +2003,10 @@ textarea:focus::placeholder {
   .body {
     padding-top: 70px;
   }
+  .btn {
+    font-size: 14px;
+    line-height: 19px;
+  }
   .section-title {
     min-height: 42px;
     margin-bottom: 80px;
@@ -2027,6 +2047,23 @@ textarea:focus::placeholder {
   .want {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .want {
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  .want__title {
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .want__select {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 25px;
+    width: auto;
   }
   .hero__text {
     font-size: 13px;
