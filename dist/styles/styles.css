@@ -1381,6 +1381,38 @@ textarea:focus::placeholder {
   width: 100%;
   height: auto;
 }
+.quote {
+  font-family: "mak", serif;
+  font-size: 6.7vw;
+  font-weight: 700;
+  line-height: 120%;
+  display: grid;
+  grid-template-areas: "first second" "third third";
+  grid-template-columns: auto auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  -webkit-column-gap: 0.25em;
+     -moz-column-gap: 0.25em;
+          column-gap: 0.25em;
+  margin-left: -2vw;
+}
+.quote__chunk {
+  display: block;
+}
+.quote__chunk:nth-child(1) {
+  grid-area: first;
+  justify-self: start;
+}
+.quote__chunk:nth-child(2) {
+  grid-area: second;
+  justify-self: end;
+}
+.quote__chunk:nth-child(3) {
+  grid-area: third;
+  justify-self: end;
+}
 .events {
   padding: 140px 0 100px;
 }
@@ -1859,6 +1891,9 @@ textarea:focus::placeholder {
   }
 }
 @media (max-width: 1339px) {
+  .home {
+    padding: 50px 0;
+  }
   .section-title {
     min-height: 52px;
     margin-bottom: 100px;
@@ -1928,6 +1963,12 @@ textarea:focus::placeholder {
   .about {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .quote {
+    grid-template-areas: "first" "second" "third";
+    grid-template-columns: auto;
+    width: 113vw;
+    font-size: 10.2vw;
   }
   .page-header__container {
     padding-left: 30px;
@@ -2136,6 +2177,17 @@ textarea:focus::placeholder {
   .about {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .quote {
+    width: 140vw;
+    font-size: 12.5vw;
+    margin-left: -20vw;
+  }
+  .quote__chunk:nth-child(1) {
+    justify-self: center;
+  }
+  .quote__chunk:nth-child(3) {
+    justify-self: center;
   }
   .page-header {
     height: 70px;
