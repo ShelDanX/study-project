@@ -5,78 +5,93 @@
   .container();
 
   &__top {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    height: 2px;
     margin-bottom: 60px;
   }
 
-  &__border {
-    box-sizing: border-box;
+  &__top::before,
+  &__top::after {
+    content: "";
+    position: absolute;
+    top: 0;
     width: 46%;
     height: 2px;
-
-    &--left {
-      background: linear-gradient(
-        270deg,
-        rgba(28, 27, 27, 1),
-        rgba(255, 255, 255, 0) 100%
-      );
-    }
-
-    &--right {
-      background: linear-gradient(
-        135deg,
-        rgba(28, 27, 27, 1),
-        rgba(255, 255, 255, 0) 100%
-      );
-    }
   }
 
-  
+  &__top::before {
+    left: 0;
+    background: linear-gradient(
+      270deg,
+      rgba(28, 27, 27, 1),
+      rgba(255, 255, 255, 0) 75%
+    );
+  }
+
+  &__top::after {
+    right: 0;
+    background: linear-gradient(
+      to right,
+      rgba(28, 27, 27, 1),
+      rgba(255, 255, 255, 0) 75%
+    );
+  }
 
   &__select {
     grid-area: select;
     display: flex;
+    position: relative;
+    padding-left: 26px;
   }
 
-  &__line {
+  &__select::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0; // Высота по содержимому
     width: 4px;
-    height: 198px;
-    background-color: @red;
-    margin-right: 22px;
+    background: @red;
   }
 
-  &__nav {
+  &__menu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 22px;
 
-  }
-
-  &__nav-link {
-    color: @black;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    text-decoration: none;
-    transition: color 0.2s;
-    margin-right: 60px;
-    &:hover {
-      color: @red_dark;
+    @media @bw768 {
+      gap: 27px;
     }
   }
 
-  &__menu {
+  &__menu-link {
+    @media @bw1340 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @media @bw768 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &__main {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
+
+    @media @bw768 {
+      flex-direction: column;
+      gap: 60px;
+    }
   }
 
   &__subscription {
-    max-width: 405px;
-    width: 30%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__label {
@@ -86,14 +101,39 @@
     margin-top: 0;
     margin-bottom: 14px;
 
+    @media @bw768 {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
     &--c {
       margin-bottom: 0;
+
+      @media @bw1340 {
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      @media @bw768 {
+        font-size: 14px;
+        line-height: 19px;
+      }
     }
   }
 
   &__send {
     display: flex;
     margin-bottom: 15px;
+    max-width: 405px;
+    min-width: 388px;
+    width: 30%;
+
+    @media @bw768 {
+      width: 100vw;
+      min-width: 0;
+      max-width: none;
+      margin-left: -20px;
+    }
   }
 
   &__input {
@@ -104,54 +144,131 @@
     line-height: 19px;
     height: 49px;
     width: auto;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
+    min-width: 0;
+
+    @media @bw768 {
+      height: 47px;
+      padding: 14.5px 20px;
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   &__btn {
-    flex-basis: 134px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  &__agree {
+    display: flex;
+    justify-content: center;
   }
 
   &__agree-label {
     margin: auto 0;
+
+    @media @bw768 {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
-  &__grid {
+  &__bottom {
     display: grid;
-    grid-template-areas: 
-    "millenials socials ."
-    "reference socials creators";
-    row-gap: 13px;
+    grid-template-areas: "meta socials creators";
+    grid-template-columns: 1fr auto 1fr;
+
+    @media @bw1340 {
+      grid-template-areas:
+        "socials socials socials"
+        "meta meta creators";
+      row-gap: 60px;
+    }
+
+    @media @bw768 {
+      grid-template-areas:
+        "socials"
+        "meta"
+        "creators";
+      grid-template-columns: auto;
+      row-gap: 20px;
+    }
   }
 
-  &__millenials {
-    grid-area: millenials;
+  &__meta {
+    grid-area: meta;
+    display: grid;
+    grid-template-areas:
+      "copyright copyright"
+      "policy cookies";
+    row-gap: 20px;
+    column-gap: 60px;
+    justify-content: start; // Сетка не растягивается на весь контейнер
+    justify-items: start; // Элементы по контенту, а не на всю ячейку
+
+    @media @bw1340 {
+      gap: 14px 15px;
+    }
+
+    @media @bw768 {
+      grid-template-areas:
+        "policy"
+        "cookies"
+        "copyright";
+      justify-content: stretch;
+      gap: 15px;
+    }
   }
 
-  &__reference {
-    grid-area: reference;
-    display: flex;
-    align-items: center;
+  &__copyright {
+    grid-area: copyright;
+
+    @media @bw768 {
+      justify-self: end;
+      margin-top: 5px;
+    }
   }
-  
+
+  &__policy {
+    grid-area: policy;
+  }
+
+  &__cookies {
+    grid-area: cookies;
+  }
+
   &__socials {
     grid-area: socials;
     display: flex;
+    justify-self: center;
+
+    @media @bw768 {
+      margin-bottom: 40px;
+    }
   }
 
   &__x-btn {
     width: 58px;
     height: 58px;
     margin: 0 22px;
+
+    @media @bw768 {
+      margin: 0 15px;
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &__creators {
     grid-area: creators;
-    display: flex;
+    display: inline-flex;
     justify-content: end;
-    align-items: center;
+    align-items: end;
+    gap: 9px;
   }
 
   &__logo {
-    margin-left: 9px;
+    margin-bottom: -7px;
   }
 }
