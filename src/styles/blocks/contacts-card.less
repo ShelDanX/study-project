@@ -1,9 +1,18 @@
 .contacts-card {
-  display: grid;
-  grid-template-columns: 110px 1fr;
+  display: flex;
   gap: 54px;
   align-items: center;
   justify-items: start;
+
+  @media @bw1340 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @media @bw768 {
+    flex-direction: row;
+    gap: 10px;
+  }
 
   &__icon-wrap {
     width: 110px;
@@ -12,6 +21,10 @@
     display: grid;
     place-items: center;
     flex-shrink: 0;
+
+    @media @bw768 {
+      width: 65px;
+    }
   }
 
   &__icon {
@@ -21,6 +34,15 @@
 
   &__title {
     margin: 0 auto 10px;
+    white-space: nowrap;
+
+    @media @bw1340 {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media @bw768 {
+      font-weight: 600;
+    }
   }
 
   &__text {
@@ -29,5 +51,21 @@
 
   &__text + &__text {
     margin-top: 5px;
+
+    @media @bw768 {
+      margin-top: 0;
+    }
+  }
+
+  &__title, &__text {
+    @media @bw1340 {
+      text-align: center; 
+    }
+
+    @media @bw768 {
+      text-align: start;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 }
