@@ -1,0 +1,33 @@
+.contacts-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 54px;
+  align-items: center;
+  justify-items: start;
+
+  &__icon-wrap {
+    width: 110px;
+    aspect-ratio: 1 / 1;
+    background: @black;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__title {
+    margin: 0 auto 10px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__text + &__text {
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,37 @@
+<section class="contacts @@class">
+  <div class="contacts__title section-title">КОНТАКТЫ</div>
+
+  <div class="contacts__content">
+    <div class="contacts__list">
+      <!-- prettier-ignore -->
+      @@loop('contacts-card.html', [
+        {
+          "class": "contacts__card",
+          "icon": "assets/icons/symbols.svg#location",
+          "title": "Томск, Красноармейская 146",
+          "first-line": "2 этаж",
+          "second-line": "оф. 206"
+        },
+        {
+          "class": "contacts__card",
+          "icon": "assets/icons/symbols.svg#home",
+          "title": "Отдел аренды",
+          "first-line": "8 (3822) 90-72-56",
+          "second-line": "idat@tusur.ru"
+        },
+        {
+          "class": "contacts__card",
+          "icon": "assets/icons/symbols.svg#star",
+          "title": "Отдел мероприятий",
+          "first-line": "8 (3822) 90-72-56",
+          "second-line": "idat@tusur.ru"
+        }
+      ])
+    </div>
+
+    <div class="contacts__map">
+      <!-- iframe карты или img-заглушка -->
+       <img src="assets/images/map.jpg" alt="Заглушка карты" />
+    </div>
+  </div>
+</section>
