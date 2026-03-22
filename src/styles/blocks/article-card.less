@@ -4,8 +4,20 @@
   width: 100%;
   position: relative;
 
+  @media @bw1340 {
+    flex-direction: column;
+  }
+
   & + .article-card {
     margin-top: 120px;
+
+    @media @bw1340 {
+      margin-top: 100px;
+    }
+    
+    @media @bw768 {
+      margin-top: 80px;
+    }
 
     &::before {
       content: "";
@@ -20,6 +32,14 @@
       height: 1px;
       background-color: @black;
       pointer-events: none;
+
+      @media @bw1340 {
+        margin-bottom: 50px;
+      }
+
+      @media @bw768 {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -37,6 +57,11 @@
     margin-right: 60px;
     font-size: 0;
     text-decoration: none;
+
+    @media @bw1340 {
+      width: 100%;
+      margin-right: 0;
+    }
 
     &:hover {
       & ~ .article-card__info {
@@ -78,10 +103,19 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
     padding: 30px 0;
     padding-right: 150px;
+
+    @media @bw1340 {
+      padding-bottom: 0;
+      padding-top: 20px;
+    }
+
+    @media @bw768 {
+      padding-bottom: 60px;
+      padding-top: 10px;
+      padding-right: 0;
+    }
   }
 
   &__time {
@@ -89,11 +123,25 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
+
+    @media @bw768 {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 20px;
+    }
   }
 
   &__title-link,
   &__description {
     max-width: 470px;
+
+    @media @bw1340 {
+      max-width: 536px;
+    }
+
+    @media @bw768 {
+      max-width: none;
+    }
   }
 
   &__title-link {
@@ -101,6 +149,15 @@
     color: @black;
     text-decoration-color: transparent;
     transition: color 0.2s, text-decoration-color 0.2s;
+
+    @media @bw1340 {
+      margin-bottom: 20px;
+    }
+
+    @media @bw768 {
+      margin-bottom: 10px;
+    }
+
     &:hover {
       color: @red;
       text-decoration-color: @red;
@@ -113,12 +170,23 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 33px;
+
+    @media @bw768 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   &__description {
     margin: 0;
     font-size: 16px;
     line-height: 22px;
+
+    @media @bw768 {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__arrow {
@@ -127,5 +195,9 @@
     bottom: 30px;
     color: inherit;
     transition: none;
+
+    @media @bw1340 {
+      bottom: 0;
+    }
   }
 }

@@ -65,7 +65,7 @@ img {
   padding: 100px 0;
 }
 .home__listing {
-  margin-bottom: 95px;
+  margin-bottom: 78px;
 }
 input,
 textarea,
@@ -214,6 +214,10 @@ textarea:focus::placeholder {
 .link:hover {
   color: #a51505;
 }
+.arrow__icon {
+  width: 92px;
+  height: 62px;
+}
 .article-card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -297,8 +301,6 @@ textarea:focus::placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
   padding: 30px 0;
   padding-right: 150px;
 }
@@ -422,6 +424,12 @@ textarea:focus::placeholder {
 .listing {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,11 +437,7 @@ textarea:focus::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  max-width: 1414px;
-  margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin-top: 0;
 }
 .listing__events-list {
   display: -webkit-box;
@@ -446,6 +450,16 @@ textarea:focus::placeholder {
 .listing__event-card {
   width: calc(33.3333% - 58px);
   margin: 0 29px 120px;
+}
+.listing__link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 0px 15px 40px;
+  margin-top: 70px;
+  text-align: end;
+  -ms-flex-item-align: end;
+      align-self: end;
 }
 .reserve {
   display: grid;
@@ -1872,6 +1886,9 @@ textarea:focus::placeholder {
   .listing__events-list {
     margin: 0 -20px -100px;
   }
+  .listing__link {
+    margin-top: 58px;
+  }
   .want__select {
     width: 604px;
   }
@@ -1904,10 +1921,48 @@ textarea:focus::placeholder {
     font-size: 14px;
     line-height: 19px;
   }
+  .arrow__icon {
+    width: 67px;
+    height: 40px;
+  }
+  .article-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .article-card + .article-card {
+    margin-top: 100px;
+  }
+  .article-card + .article-card::before {
+    margin-bottom: 50px;
+  }
+  .article-card__link {
+    width: 100%;
+    margin-right: 0;
+  }
+  .article-card__info {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+  .article-card__title-link,
+  .article-card__description {
+    max-width: 536px;
+  }
+  .article-card__title-link {
+    margin-bottom: 20px;
+  }
+  .article-card__arrow {
+    bottom: 0;
+  }
   .event-card__title {
     min-height: 54px;
     font-size: 20px;
     line-height: 27px;
+  }
+  .listing {
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .listing__events-list {
     margin: 0 -15px -100px;
@@ -1915,6 +1970,9 @@ textarea:focus::placeholder {
   .listing__event-card {
     width: calc(33.3333% - 30px);
     margin: 0 15px 100px;
+  }
+  .listing__link {
+    margin-top: 40px;
   }
   .reserve {
     padding-left: 30px;
@@ -2114,10 +2172,46 @@ textarea:focus::placeholder {
     padding: 11px 20px;
     font-size: 20px;
   }
+  .article-card + .article-card {
+    margin-top: 80px;
+  }
+  .article-card + .article-card::before {
+    margin-bottom: 40px;
+  }
+  .article-card__info {
+    padding-bottom: 60px;
+    padding-top: 10px;
+    padding-right: 0;
+  }
+  .article-card__time {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+  .article-card__title-link,
+  .article-card__description {
+    max-width: none;
+  }
+  .article-card__title-link {
+    margin-bottom: 10px;
+  }
+  .article-card__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .article-card__description {
+    font-size: 14px;
+    line-height: 19px;
+  }
   .event-card__title {
     min-height: 44px;
     font-size: 16px;
     line-height: 22px;
+  }
+  .listing {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .listing__events-list {
     margin: 0 -10px -80px;
