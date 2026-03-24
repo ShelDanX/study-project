@@ -217,6 +217,12 @@ textarea:focus::placeholder {
 .arrow__icon {
   width: 92px;
   height: 62px;
+  color: #1f1e1e;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.arrow__icon:hover {
+  color: #bc3324;
 }
 .article-card {
   -webkit-box-sizing: border-box;
