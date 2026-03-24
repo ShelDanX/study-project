@@ -1985,6 +1985,9 @@ textarea:focus::placeholder {
   .home {
     padding: 50px 0;
   }
+  .home__listing {
+    max-width: 708px;
+  }
   .section-title {
     min-height: 52px;
     margin-bottom: 100px;
@@ -2268,6 +2271,9 @@ textarea:focus::placeholder {
 @media (max-width: 767px) {
   .body {
     padding-top: 70px;
+  }
+  .home__listing {
+    max-width: 464px;
   }
   .btn {
     font-size: 14px;
