@@ -1,77 +1,108 @@
 .about {
   .container();
+  margin-bottom: 200px;
 
-   &__intro,
-  &__gallery,
-  &__mission,
-  &__cta {
+  &__block {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: 40px;
-    align-items: start;
+    grid-template-columns: 1fr 406px;
+    gap: 90px 65px;
+    grid-template-areas: 
+    "pic pic2"
+    "title pic2"
+    "text text";
+    margin-bottom: 75px;
+  }
+
+  &__picture {
+    grid-area: pic;
+  }
+
+  &__picture2 {
+    grid-area: pic2;
+    align-self: flex-end;
+  }
+
+  &__picture3 {
+    grid-area: pic3;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 20px 10px 0 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -50px;
+
+      width: calc(100% + 50px + 10px);
+      height: 246px;
+
+      background-color: @red;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    margin: 10px 0 0;
+    font-size: 44px;
+    font-weight: 700;
+
+    &--intro {
+      margin: 0 0 50px;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 80px 0 auto;
+    max-width: 870px;
+    width: 100%;
+
+    &--intro {
+      margin: 0 0 0 auto;
+    }
+
+    &--cta {
+      margin: 0;
+      align-self: center;
+    }
   }
 
   &__intro {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
-
-  &__intro-title {
-    grid-column: 1 / 5;
-    margin: 0;
-  }
-
-  &__intro-text {
-    grid-column: 5 / 12;
-    margin: 0;
-  }
-
-  &__gallery {
-    margin-bottom: 80px;
-  }
-
-  &__photo--main {
-    grid-column: 1 / 9;
-    margin: 0;
-  }
-
-  &__photo--side {
-    grid-column: 9 / 13;
-    margin: 0;
-    align-self: end;
-  }
-
-  &__mission {
-    margin-bottom: 80px;
-  }
-
-  &__mission-title {
-    grid-column: 1 / 6;
-    margin: 0;
-  }
-
-  &__mission-text {
-    grid-column: 5 / 12;
-    margin: 0;
-  }
-
+  
   &__cta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas:
+    "pic3 ."
+    "pic3 text"
+    "pic3 link";
+    column-gap: 60px ;
     margin-bottom: 0;
   }
 
-  &__photo--cta {
-    grid-column: 1 / 10;
-    margin: 0;
+  &__cta-link {
+    grid-area: link;
+    display: flex; 
+    align-items: center;
+    position: relative;
+
+    &:hover {
+      color: @red;
+      text-decoration-color: @red;
+    }
   }
 
-  &__cta-content {
-    grid-column: 10 / 13;
-    align-self: end;
+  &__cta-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
-
-  &__photo img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
 }
